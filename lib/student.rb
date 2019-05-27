@@ -48,7 +48,7 @@ class Student
 
   def self.new_from_db(name)
     sql = <<-SQL
-      
+      SELECT * FROM students WHERE 
     SQL
   end   
 
