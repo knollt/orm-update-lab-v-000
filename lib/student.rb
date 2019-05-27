@@ -48,8 +48,10 @@ class Student
 
   def self.new_from_db(name)
     sql = <<-SQL
-      SELECT * FROM students WHERE 
+      SELECT * FROM students WHERE name = ? LIMIT 1 
     SQL
+  
+    DB[:conn].execute(sql)
   end   
 
 end
