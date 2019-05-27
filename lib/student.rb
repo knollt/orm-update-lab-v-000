@@ -40,7 +40,7 @@ class Student
     end   
   end 
   
-  def self.create
+  def self.create (name, grade)
     
   end   
   # Remember, you can access your database connection anywhere in this class
