@@ -4,13 +4,15 @@ class Student
   
   attr_accessor :id, :name, :grade
   
-  def initialize (name, grade, id=nil)
+  def initialize (name, grade, id=nil) 
+    #method takes three arguments
     @id = id
     @name = name
     @grade = grade
   end 
   
-  def self.create_table
+  def self.create_table 
+    #class method creates students table that matches attributes of indivdual students 
     sql = <<-SQL
       CREATE TABLE IF NOT EXISTS students (
       id INTEGER PRIMARY KEY,
@@ -22,6 +24,7 @@ class Student
   end   
     
   def self.drop_table
+    # class method responsible for dropping students table
     sql = "DROP TABLE IF EXISTS students"
     DB[:conn].execute(sql)
   end   
